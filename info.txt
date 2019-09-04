@@ -1,0 +1,42 @@
+Hello and welcome to my GitHub corner!
+
+On August 14, 2019 while watching day 5 commentary of the Saint Louis Rapid & Blitz chess tournament (the fourth event on the 2019 Grand Chess Tour), for whatever reason I recalled as back in the 5th grade of school I tried to resolve a problem for moving a chess knight piece around an empty chess board by visiting each square only once.  Back then "computer" was not in my vocabulary, let alone "computer programming".  Nevertheless, I remember moving a knight manually (sometimes using small buttons for keeping track of visited squares) as being a fun exercise.
+
+N years later I decided to try and resolve that problem programmatically with Python as my newly acquired tool.  The problem also presented a good opportunity for practicing recursion programming. 
+
+Working initially with a smaller 5-by-5 squares board seemed reasonable given the fact that the problem does require significant computational resources for a standard 8-by-8 board.  The program has been run on an Intel Core i5 2400 CPU powered PC.  It's good enough for calculating all the outcomes of the problem when starting from each of the 25 squares of a 5-by-5 board within a respectable just under 5 minutes time.
+
+Total number of path combinations on a 5-by-5 board from a1: 304
+Total number of path combinations on a 5-by-5 board from a2: 0
+Total number of path combinations on a 5-by-5 board from a3: 56
+Total number of path combinations on a 5-by-5 board from a4: 0
+Total number of path combinations on a 5-by-5 board from a5: 304
+Total number of path combinations on a 5-by-5 board from b1: 0
+Total number of path combinations on a 5-by-5 board from b2: 56
+Total number of path combinations on a 5-by-5 board from b3: 0
+Total number of path combinations on a 5-by-5 board from b4: 56
+Total number of path combinations on a 5-by-5 board from b5: 0
+Total number of path combinations on a 5-by-5 board from c1: 56
+Total number of path combinations on a 5-by-5 board from c2: 0
+Total number of path combinations on a 5-by-5 board from c3: 64
+Total number of path combinations on a 5-by-5 board from c4: 0
+Total number of path combinations on a 5-by-5 board from c5: 56
+Total number of path combinations on a 5-by-5 board from d1: 0
+Total number of path combinations on a 5-by-5 board from d2: 56
+Total number of path combinations on a 5-by-5 board from d3: 0
+Total number of path combinations on a 5-by-5 board from d4: 56
+Total number of path combinations on a 5-by-5 board from d5: 0
+Total number of path combinations on a 5-by-5 board from e1: 304
+Total number of path combinations on a 5-by-5 board from e2: 0
+Total number of path combinations on a 5-by-5 board from e3: 56
+Total number of path combinations on a 5-by-5 board from e4: 0
+Total number of path combinations on a 5-by-5 board from e5: 304
+Execution time: 298.9033079147339
+
+There is an obvious pattern for start squares with an even either row number or column label count number not yielding any sequential combinations of all 25 squares.  Working knight's way from corner squares produced the most unique path combinations of 304 for a 5-by-5 board.
+
+Notching up the board size by one column and one row for a total of 36 squares significantly slowed down the output, as the amount of necessary calculations increased exponentially.  Started from square a1, it yielded well over 200K of unique combinations before I stopped the process, and it wasn’t even half of all possible sets based on the output square pattern.
+
+For a 8-by-8 board I was patient enough to see a few dozens of combinations output from square a1.  Even modern super-computers may not be able to get to the "bottom" of it, as either of them would have been executing the same single-threaded recursive code.
+
+Anyway, it's been a fun endeavour into childhood memory.
